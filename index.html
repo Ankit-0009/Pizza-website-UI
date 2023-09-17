@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Store</title>
+    <style>
+      .bold-text {
+        font-weight: 500;
+      }
+    </style>
+    <!-- Here link tag copy from bootstrap.com-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container"> <!-- container class provide indentation-->
+                
+        
+               
+   
+        <div class="row"> <!-- This create a layout of rows-->
+           <div class="col-8"> <!--Whole screen divided in 12 columns so we divided one part in 8 colns-->
+            
+            <div class="d-flex  justify-content-between" style="background-color: rgb(252, 252, 252);">
+                <div class="p-2">
+                    <h1 >
+                        <nav class="navbar navbar-light ">
+                            <a class="navbar-brand" href="#" style="font-size: 30px;">
+                              <img src="https://pizzahutmaroc.ma/images/logo.png" width="35" height="35" class="d-inline-block align-top" alt="">
+                              <i>Pizza Hut</i>
+                            </a>
+                          </nav>
+                    </h1>
+                </div>
+                <div class="d-flex"></div>
+                <div class="p-2">
+                    <nav class="navbar navbar-light ">
+                        <a class="navbar-brand" href="#" style="font-size: 15px;">
+                          <img src="data:image/png;base64,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" width="20" height="20" class="d-inline-block align-top" alt="">
+                          Ordering for Delivery to MAHARISHI ROAD 
+                        </a>
+                      </nav>
+                </div>
+                <div class="p-2">
+                    <nav class="navbar navbar-light ">
+                        <a class="navbar-brand" href="#" style="font-size: 15px;">
+                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv-JDUrSiSwjwAat4IWhSCMJo3eqVZ4qnDiA&usqp=CAU" width="20" height="20" class="d-inline-block align-top" alt="">
+                            ASAP
+                        </a>
+                      </nav>
+                </div>
+            </div>
+
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                  <div class="navbar-nav">
+                    <a class="nav-item nav-link active" href="http://127.0.0.1:5500/index.html#" style="font-size: 19px;">
+                        <div class="text-bg-danger p-1">Deals</div> 
+                      </a>
+                    <a class="nav-item nav-link active" href="#" style="font-size: 19px;"> Pizzas </a>
+                    <a class="nav-item nav-link active" href="#" style="font-size: 19px;">Sides </a>
+                    <a class="nav-item nav-link active" href="#" style="font-size: 19px;">Desserts</a>
+                    <a class="nav-item nav-link active" href="#" style="font-size: 19px;">Drinks </span></a>
+                    
+                  </div>
+                </div>
+            </nav>
+            <br>
+
+
+            <div class="d-flex align-content-between flex-wrap flex-row justify-content-around row-gap-3">
+                <div class="card" style="width: 22rem;">
+                    <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/deal/one-plus-one-personal.b91439a2f97fc959ad0e813f3e2e84d4.1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Super Value Deal : 2 Personal Pizza starting at Rs. 299</h5>
+                      <p class="card-text">Choose any of 2 personal pizza</p>
+                      <div class="row">
+                        <p class="card-text"><b>₹299</b></p>
+                        <a href="https://www.pizzahut.co.in/order/deal/?id=one-plus-one-personal&basketId=tnwzVUz4N" class="btn btn-primary">Customize your deal</a>
+                      </div> 
+                    </div>
+                  </div>
+    
+    
+                  <div class="card" style="width: 22rem;">
+                    <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/deal/one-plus-one.3bd9e1cd8f0d063f07ff0f57df49b96c.1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Super Value Deal : 2 Medium Pizza starting at Rs. 699</h5>
+                      <p class="card-text">Choose any of 2 medium pizza</p>
+                      <div class="row">
+                        <p class="card-text"><b>₹699 <font color="red"><s> ₹1058</s></font></b></p>
+                        <a href="https://www.pizzahut.co.in/order/deal/?id=one-plus-one&basketId=J23jaLJnt" class="btn btn-primary">Customize your deal</a>
+                      </div> 
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 22rem;">
+                    <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/deal/free-pizza.0f3b6a611343bf377717881e3c54c880.1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Free Pizza</h5>
+                      <p class="card-text">Get Free Personal Margherita on orders above 249 | Use Code - FREEPIZZA</p>
+                      <div class="row">
+                        <p class="card-text"><br><br></p>
+                        <a href="https://www.pizzahut.co.in/order/deal/?id=free-pizza&basketId=_2Lz-qHIh" class="btn btn-primary">Customize your deal</a>
+                      </div> 
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 22rem;">
+                    <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/deal/flavour-fun-box-of-4.0b6762413070128ed5658ef0e4c358e7.1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Flavour Fun Box of 4</h5>
+                      <p class="card-text">Get 4 assorted Flavor Fun Pizzas. Perfect pizza crust topped with exciting new sauces, cheesy dressing & your favorite toppings</p>
+                      <div class="row">
+                        <p class="card-text"><b>₹349</b></p>
+                        <a href="https://www.pizzahut.co.in/order/deal/?id=flavour-fun-box-of-4&basketId=_Obe1QeYB" class="btn btn-primary">Customize your deal</a>
+                      </div> 
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 22rem;">
+                    <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/deal/stuffed-crust-meal-for-2.119c5fb5b50e330613e07267c0a721b3.1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Stuffed Crust - Meal for 2</h5>
+                      <p class="card-text">Delicious Meal for 2 with great choice of pizzas and signature crusts with Pepsi</p>
+                      <div class="row">
+                        <p class="card-text"><b> ₹499</b></p>
+                        <p class="card-text"> <br> </p>
+                        <a href="https://www.pizzahut.co.in/order/deal/?id=stuffed-crust-meal-for-2&basketId=-MXaTgeJe" class="btn btn-primary">Customize your deal</a>
+                      </div> 
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 22rem;">
+                    <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/deal/hut-meal-for-4.0e5ac94da0985f5689876da467fb694a.1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Super Saver Meal Combo starting at Rs.799 (Save Upto 38%)</h5>
+                      <p class="card-text">2 Med Pizza of Choice, 1 Classic Breadstix, 1 Creamy Breadstix, 2 Pepsi Pet Bottles</p>
+                      <div class="row">
+                        <p class="card-text"><b>₹799  <font color="red"><s> ₹1286</s></font></b></p>
+                        <a href="https://www.pizzahut.co.in/order/deal/?id=flavour-fun-box-of-4&basketId=_Obe1QeYB" class="btn btn-primary">Customize your deal</a>
+                      </div> 
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 22rem;">
+                    <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/deal/hut-treat-box-4-san-francisco-style.974927c3c1384fe85e1c7e2bbb3b5069.1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Hut Treat Box 4 San Francisco Style</h5>
+                      <p class="card-text">Hut Treat Box 4 San Francisco Style</p>
+                      <div class="row">
+                        <p class="card-text"><b>₹799 <font color="red"><s> ₹1200</s></font></b></p>
+                        <p class="card-text"><br></p>
+                        <a href="https://www.pizzahut.co.in/order/deal/?id=hut-treat-box-4-san-francisco-style&basketId=RcFTsPqSv" class="btn btn-primary">Customize your deal</a>
+                      </div> 
+                    </div>
+                  </div>
+
+                  <div class="card" style="width: 22rem;">
+                    <img src="https://api.pizzahut.io/v1/content/en-in/in-1/images/deal/double-treat-box.f45de84ca09877604b2f73728c08a667.1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Meal for 2 with Pizza & Classic Bread Stix</h5>
+                      <p class="card-text">2 Personal Pizza Upto Veg Signature, 1 Classic Bread Stix</p>
+                      <div class="row">
+                        <p class="card-text"><b>₹449  <font color="red"><s> ₹507</s></font></b></p>
+                        <a href="https://www.pizzahut.co.in/order/deal/?id=double-treat-box&basketId=JOeeb4eMG" class="btn btn-primary">Customize your deal</a>
+                      </div> 
+                    </div>
+                  </div>
+
+            </div>
+                    
+            
+            
+
+
+            </div>
+          <div class="col-4">
+            <br>
+            <div class="card" style="width: 18rem h; height: 35rem;">
+              <div class="card-body">
+                
+                  <h3 class="card-title text-center"><b>Your Basket</b></h3>
+                
+                <h6 class="card-subtitle mb-2 text-muted"></h6>
+                <p class="card-text"></p> <br>
+                <div class="text-center">
+                  <button type="button" class="btn btn-light" > <b><font color="green"  size="+0">Apply Coupon code or Gift Card  &nbsp;&nbsp; &nbsp;></font></b></button>
+                </div>
+                <br><br>
+                <p ><font size="-1">Your basket looks a little empty. Why not check out some of our unbeatable deals?</font></p>
+                <!-- <a href="#" class="card-link">Another link</a> -->
+                <br><br><br><br><br><br><br><br><br>
+                <p class="text-center bold-text" >Minimum cart value for delivery is ₹200</p>
+                <div class="text-center">
+                  <button type="button" class="btn btn-success btn btn-default btn-lg">&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;Checkout &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;</button>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            
+        </div>
+    </div>
+</body>
+</html>
